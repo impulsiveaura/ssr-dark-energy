@@ -9,7 +9,6 @@ Extension of ΛCDM with Cosmological Constraints and Laboratory Falsifiability**
 
 ## Data and chains
 Full MCMC chain files: https://doi.org/10.5281/zenodo.20260778
-(Replace XXXXXXX with your Zenodo DOI after Step 15 below)
 
 ## Requirements
 - Python 3.11+
