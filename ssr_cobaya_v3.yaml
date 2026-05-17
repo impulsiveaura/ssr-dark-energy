@@ -1,0 +1,108 @@
+likelihood:
+  sn.pantheon:
+    path: /Users/sharafsrahman/cobaya_packages/data/sn_data
+  ssr_growth_like_v2.SSRGrowthLike: null
+output: chains/ssr_v3
+packages_path: /Users/sharafsrahman/cobaya_packages
+params:
+  H0:
+    latex: H_0
+    prior:
+      max: 80
+      min: 60
+    proposal: 0.4
+    ref:
+      dist: norm
+      loc: 67.4
+      scale: 0.5
+  Omega_m:
+    latex: \Omega_m
+    prior:
+      max: 0.5
+      min: 0.2
+    proposal: 0.004
+    ref:
+      dist: norm
+      loc: 0.315
+      scale: 0.005
+  ssr_A:
+    latex: A
+    prior:
+      max: 0.1
+      min: -0.1
+    proposal: 0.002
+    ref:
+      dist: norm
+      loc: 0.03
+      scale: 0.003
+  ssr_Lambda4:
+    latex: \Lambda^4
+    prior:
+      max: 0.01
+      min: 1.0e-06
+    proposal: 4.0e-06
+    ref:
+      dist: norm
+      loc: 0.0001
+      scale: 5.0e-06
+  ssr_beta:
+    latex: \beta
+    prior:
+      max: 1.0
+      min: 0.001
+    proposal: 0.008
+    ref:
+      dist: norm
+      loc: 0.15
+      scale: 0.01
+  ssr_f_Xi:
+    latex: f_{\Xi}
+    prior:
+      max: 1.0
+      min: 0.01
+    proposal: 0.04
+    ref:
+      dist: norm
+      loc: 0.5
+      scale: 0.05
+  ssr_lambda:
+    latex: \lambda
+    prior:
+      max: 5.0
+      min: 0.01
+    proposal: 0.04
+    ref:
+      dist: norm
+      loc: 0.5
+      scale: 0.05
+  ssr_omega:
+    latex: \omega
+    prior:
+      max: 8.0
+      min: 0.5
+    proposal: 0.2
+    ref:
+      dist: norm
+      loc: 3.3
+      scale: 0.3
+  ssr_phi:
+    latex: \phi
+    prior:
+      max: 6.2832
+      min: 0.0
+    proposal: 0.15
+    ref:
+      dist: norm
+      loc: 2.1
+      scale: 0.2
+sampler:
+  mcmc:
+    Rminus1_stop: 0.05
+    burn_in: 100
+    learn_proposal: true
+    learn_proposal_Rminus1_max: 30
+    max_tries: 10000
+    proposal_scale: 1.9
+theory:
+  ssr_cobaya_theory.SSRBoltzmann:
+    speed: 2

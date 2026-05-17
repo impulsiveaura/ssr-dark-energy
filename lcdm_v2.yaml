@@ -1,0 +1,51 @@
+likelihood:
+  sn.pantheon:
+    path: /Users/sharafsrahman/cobaya_packages/data/sn_data
+  ssr_growth_like_v2.SSRGrowthLike: null
+output: chains/lcdm_v2
+packages_path: /Users/sharafsrahman/cobaya_packages
+params:
+  H0:
+    latex: H_0
+    prior:
+      max: 80
+      min: 60
+    proposal: 0.4
+    ref:
+      dist: norm
+      loc: 67.4
+      scale: 0.5
+  Omega_m:
+    latex: \Omega_m
+    prior:
+      max: 0.5
+      min: 0.2
+    proposal: 0.004
+    ref:
+      dist: norm
+      loc: 0.315
+      scale: 0.005
+  ssr_A:
+    value: 0.0
+  ssr_Lambda4:
+    value: 0.0001
+  ssr_beta:
+    value: 0.15
+  ssr_f_Xi:
+    value: 0.5
+  ssr_lambda:
+    value: 0.5
+  ssr_omega:
+    value: 3.3
+  ssr_phi:
+    value: 2.1
+sampler:
+  mcmc:
+    Rminus1_stop: 0.05
+    burn_in: 100
+    learn_proposal: true
+    max_tries: 10000
+    proposal_scale: 1.9
+theory:
+  ssr_cobaya_theory.SSRBoltzmann:
+    speed: 2
